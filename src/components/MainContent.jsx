@@ -87,9 +87,7 @@ export default function MainContent() {
 		};
 	}, [timings]);
 
-	// const data = await axios.get(
-	// 	"https://api.aladhan.com/v1/timingsByCity?country=SA&city=Riyadh"
-	// );
+
 
 	const setupCountdownTimer = () => {
 		const momentNow = moment();
@@ -122,7 +120,7 @@ export default function MainContent() {
 
 		setNextPrayerIndex(prayerIndex);
 
-		// now after knowing what the next prayer is, we can setup the countdown timer by getting the prayer's time
+		
 		const nextPrayerObject = prayersArray[prayerIndex];
 		const nextPrayerTime = timings[nextPrayerObject.key];
 		const nextPrayerTimeMoment = moment(nextPrayerTime, "hh:mm");
